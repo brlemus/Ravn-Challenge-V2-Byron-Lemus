@@ -1,9 +1,21 @@
 import React from 'react';
+import Content from './component/content/Content';
+import Header from './component/hearder/Hearder';
+import SideBar from './component/sideBar/SideBar';
+import './App.css';
+
+
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <>
+      <Header/>
+      <div className="main">
+          <SideBar/>
+          <Content/>
+      </div>
+      
+    </>
   );
 }
 

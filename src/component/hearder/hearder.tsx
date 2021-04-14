@@ -1,9 +1,16 @@
-import React, { FC, useContext, useEffect, useReducer, useState } from 'react';
+import React from 'react';
+import './Hearder.scss'
 
-const Header: FC = () =>{
+interface PROPS {
+    algo: string;
+}
+
+const Header = () =>{
+
     return(
-       <>
-       </>
+       <header className='header'>
+           <text className='textFormat'>Ravn Star Wars Registry</text>
+       </header>
     );
 }
 

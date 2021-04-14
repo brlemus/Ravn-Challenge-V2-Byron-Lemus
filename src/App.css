@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.main{
+  display: flex;
+}
+
+/* .header{
+  grid-template-columns: ;
+  grid-template-rows: ;
+  grid-column: ;
+} */
