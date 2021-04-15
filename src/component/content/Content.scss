@@ -1,0 +1,58 @@
+@import '../../styles/variables.scss';
+@font-face {
+    font-family: 'SF-Pro-Display';
+    src: local('SF-Pro-Display'), url('../../assets/font/SF-Pro-Display.ttf') format('truetype');
+  }
+
+.mainContent{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleInformation{
+    width: 890px;
+    height: 60px;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.0125em;
+    color: $text-dark;
+}
+
+.liContent{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-color;
+    width: 890px;
+    height: 49px;
+}
+
+.titleListContent{
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.0125em;
+    color: $second-text-color;
+}
+
+.valueListContent{
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: 0.0125em;
+    color: $text-dark;
+}

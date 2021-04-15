@@ -9,7 +9,7 @@ const Header = () =>{
 
     return(
        <header className='header'>
-           <text className='textFormat'>Ravn Star Wars Registry</text>
+           <p className='textFormat'>Ravn Star Wars Registry</p>
        </header>
     );
 }

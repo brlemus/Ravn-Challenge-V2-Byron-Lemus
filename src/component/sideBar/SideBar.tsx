@@ -1,24 +1,61 @@
-import React from 'react';
-import {ReactComponent as LoadingImg} from '../../assets/images/loading.svg'
-import Loading from '../commun/loading/Loading';
-import './SideBar.scss'
+import React, { useState } from 'react';
+import './SideBar.scss';
+import { useQuery, gql } from '@apollo/client';
+import { Person } from '../../interfaces/Person';
+import ArrowRight from '../../assets/images/arrow-right.svg'
 
-interface PROPS {
-    name: string;
-    from: string;
+const ALL_PEOPLE = 
+    gql`
+        query GetAllPeople {
+            allPeople(first:5) {    
+                pageInfo{
+                    hasNextPage
+                    hasPreviousPage
+                    startCursor
+                    endCursor
+                
+                }
+                people {
+                    id
+                    name
+                    species{
+                        name
+                    }
+                    homeworld{
+                        name
+                    }
+                }
+            }
+        }
+    `;
+
+interface SIDEBARPROPS {
+    setIdPerson: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const ListItem = ({name, from}: PROPS ) =>(
-    <li></li>
-);
 
-const SideBar = () =>{
+const SideBar = (props: SIDEBARPROPS) =>{
+    const { loading, error, data } = useQuery(ALL_PEOPLE);
     return(
        <aside className='sideBar'>
-        <Loading/>
-       <ul>
-           
-       </ul>
+        {loading?<p>Loading...</p>:''}
+        {error?<p>Error :(</p>:''}
+        {data?
+        <div >
+            <ul>
+                {data.allPeople.people.map((item: Person) =>
+                    <li key={item.id} className="liSideBar">
+                        <button onClick={() => props.setIdPerson(item.id)}>
+                            <h2 className="personName">{item.name}</h2>
+                            <p className="personSpeciesHomeworld">{`${item.species?item.species.name:'Human'} from ${item.homeworld?.name}`}</p>
+                        </button>
+                        <img src={ArrowRight} className="imgStyle"/>
+                    </li>              
+                )}
+            </ul>
+        </div>
+        :''}
+       
        </aside>
     );
 }
