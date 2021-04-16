@@ -1,4 +1,4 @@
 # Ravn-Challenge-V2-Byron-Lemus
 
-![Image](../blob/master/src/assets/images/screenshots1.png?raw=true)
+![Main Page](https://github.com/brlemus/Ravn-Challenge-V2-Byron-Lemus/blob/master/src/assets/images/screenshots1.PNG?raw=true)
 
