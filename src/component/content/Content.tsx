@@ -11,10 +11,11 @@ const capitalize = (str: string) =>{
     return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 }
 
-function getQuery(idPerson: string){
-    return gql`
-        query GetPersonDetails {
-            person(id: "${idPerson}") {
+const PERSON_DETAILS = 
+    gql`
+        query GetPersonDetails($idPerson: ID) 
+        {
+            person(id: $idPerson) {
                 id
                 eyeColor
                 hairColor
@@ -27,16 +28,12 @@ function getQuery(idPerson: string){
                 }
             }
         }
-        `;
-};
+    `;
 
-const Content = (props: PROPS) =>{
-        const queryString = getQuery(props.idPerson);
-        const { loading, error, data = null } = useQuery(queryString);
+const Content = (props: PROPS) =>{    
+    const { data } = useQuery(PERSON_DETAILS, {variables: {idPerson: props.idPerson}});
     return(
        <main className="mainContent">
-            {loading && props.idPerson?<p>Loading...</p>:''}
-            {error && props.idPerson?<p>Error :(</p>:''}
             {data?
                 <div style={{textAlign:"center"}}>
                     <h2 className='titleInformation'>General Information</h2>

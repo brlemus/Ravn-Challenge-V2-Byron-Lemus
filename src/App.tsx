@@ -4,8 +4,6 @@ import Header from './component/hearder/Hearder';
 import SideBar from './component/sideBar/SideBar';
 import './App.css';
 
-
-
 function App() {
   const [idPerson, setIdPerson] = useState("");
   return (

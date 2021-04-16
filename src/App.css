@@ -47,9 +47,7 @@
   display: flex;
 }
 
-
-/* .header{
-  grid-template-columns: ;
-  grid-template-rows: ;
-  grid-column: ;
-} */
+@font-face {
+  font-family: 'SF-Pro-Display';
+  src: local('SF-Pro-Display'), url('../src/assets/font/SF-Pro-Display.ttf') format('truetype');
+}

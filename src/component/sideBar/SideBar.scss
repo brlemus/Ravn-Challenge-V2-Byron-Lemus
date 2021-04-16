@@ -7,29 +7,27 @@
     top: 52px;
     background: $white;
     box-shadow: 1px 0px 0px $border-color;
+    overflow: auto;
+    overflow-x: none;
 }
 
 .liSideBar{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid $border-color;
-    width: 339px;
     height: 69px;
-    margin-left: 10px;
+    padding: 0 10px 0 10px;
     top: 52px;
+    align-items: center;
 
 }
 
 .imgStyle{
     width: 8px;
     height: 12px;
-    margin-right: 16px;
-    margin-top: 30px;
 }
 
 .personName{
-    width: 124px;
-    height: 20px;
     font-family: 'SF Pro Display';
     font-style: normal;
     font-weight: bold;
@@ -61,4 +59,8 @@ button{
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+}
+
+.ulSideBar{
+    width: 100%;
 }

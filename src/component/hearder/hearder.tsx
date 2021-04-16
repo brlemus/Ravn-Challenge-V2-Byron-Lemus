@@ -1,10 +1,6 @@
 import React from 'react';
 import './Hearder.scss'
 
-interface PROPS {
-    algo: string;
-}
-
 const Header = () =>{
 
     return(

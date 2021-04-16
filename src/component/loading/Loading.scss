@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+
+.loading{
+    display: flex;
+    justify-content: center;
+    height: 69px;
+    top: 28.57%;
+    align-items: center;
+    width: 100%;
+}
+
+.loadingText{
+    padding: 0 0 0 10px;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.0125em;
+    color: $second-text-color;
+}
