@@ -76,7 +76,7 @@ const SideBar = (props: SIDEBARPROPS) =>{
                             <h2 className="personName">{item.name}</h2>
                             <p className="personSpeciesHomeworld">{`${item.species?item.species.name:'Human'} from ${item.homeworld?.name}`}</p>
                         </button>
-                        <img src={ArrowRight} className="imgStyle"/>
+                        <img src={ArrowRight} alt="" className="imgStyle"/>
                     </li>              
                 )}
                 {(loading || hasNextPage) && (           

@@ -5,7 +5,7 @@ import LoadingSVG from '../../assets/images/loading.svg';
 const Loading = () =>{
     return(
        <div className='loading' >
-            <img src={LoadingSVG}/><p className="loadingText">Loading</p>
+            <img src={LoadingSVG} alt=""/><p className="loadingText">Loading</p>
        </div>
     );
 }
