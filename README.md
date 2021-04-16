@@ -1,9 +1,9 @@
 # Ravn-Challenge-V2-Byron-Lemus
 
 ## Techologies Used
-  React 17.0.2
-  Apollo/client 3.3.15
-  Graphql 15.5.0
+  React           17.0.2  
+  Apollo/client   3.3.15  
+  Graphql         15.5.0  
 
 ## Project Description
 Sample project consuming GraphQL API for Starwars
