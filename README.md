@@ -1,4 +1,4 @@
 # Ravn-Challenge-V2-Byron-Lemus
 
-![Image](../blob/master/src/assets/images/screenshots1.png.png?raw=true)
+Ravn-Challenge-V2-Byron-Lemus/src/assets/images/
 
